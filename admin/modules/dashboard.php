@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Product Management</h5>
                     <p class="card-text">Quản lý sản phẩm của bạn, thêm sản phẩm mới, cập nhật hoặc xóa sản phẩm hiện có.</p>
-                    <a href="#" class="btn btn-primary">Go to Product Management</a>
+                    <a href="index.php?action=quanlysanpham&query=add" class="btn btn-primary">Go to Product Management</a>
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Category Management</h5>
                     <p class="card-text">Quản lý danh mục sản phẩm của bạn, tạo danh mục mới hoặc xóa danh mục.</p>
-                    <a href="#" class="btn btn-primary">Go to Category Management</a>
+                    <a href="index.php?action=quanlydanhmuc&query=add" class="btn btn-primary">Go to Category Management</a>
                 </div>
             </div>
         </div>

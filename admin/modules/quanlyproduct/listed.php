@@ -36,8 +36,8 @@
                         <td style="width: 200px;">
                             <img src="modules/quanlyproduct/uploads/<?= $row['images_hover']; ?>" alt="" class="img-fluid" style="object-fit: cover;">
                         </td>
-                        <td><?= $row['price']; ?></td>
-                        <td><?= $row['old_price']; ?></td>
+                        <td><?= number_format($row['price']).'đ'; ?></td>
+                        <td><?= number_format($row['old_price']).'đ'; ?></td>
                         <td><?= $row['quantity']; ?></td>
                         <td><?= $row['descript']; ?></td>
                         <td>
@@ -50,8 +50,8 @@
                             ?>
                         </td>
                         <td class="">
-                            <a href="?action=quanlysanpham&query=edit&idproduct=<?= $row['id_product']; ?>" class="nav-link text-warning">EDIT</a>
-                            <a href="modules/quanlyproduct/handle.php?idproduct=<?= $row['id_product']; ?>" class="nav-link text-danger">DELETE</a>
+                            <a href="?action=quanlysanpham&query=edit&idproduct=<?= $row['id_product']; ?>" class="nav-link btn btn-warning mb-2">EDIT</a>
+                            <a href="modules/quanlyproduct/handle.php?idproduct=<?= $row['id_product']; ?>" class="nav-link btn btn-danger">DELETE</a>
                         </td>
                     </tr>
             <?php } ?>

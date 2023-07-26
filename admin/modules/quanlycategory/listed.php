@@ -26,8 +26,8 @@
                         <td><?= $row['category_name']; ?></td>
                         <td><?= $row['stt']; ?></td>
                         <td class="d-flex">
-                            <a href="?action=quanlydanhmuc&query=edit&idcategory=<?php echo $row['id_category']; ?>" class="nav-link text-warning">EDIT</a>
-                            <a href="modules/quanlycategory/handle.php?idcategory=<?php echo $row['id_category']; ?>" class="nav-link text-danger">DELETE</a>
+                            <a href="?action=quanlydanhmuc&query=edit&idcategory=<?php echo $row['id_category']; ?>" class="nav-link btn btn-warning mx-2">EDIT</a>
+                            <a href="modules/quanlycategory/handle.php?idcategory=<?php echo $row['id_category']; ?>" class="nav-link btn btn-danger mx-2">DELETE</a>
                         </td>
                     </tr>
             <?php } ?>
