@@ -7,9 +7,12 @@
         $query = '';
     }
 
-    if ($temp == 'quanlysanpham' && $query == 'add') {
-        include('');
-    } else if ($temp == 'quanlydanhmuc' && $query == 'add') {
+    if ($temp == 'quanlysanpham' && $query == 'add') { //quản lý sản phẩm
+        include('modules/quanlyproduct/add.php');
+        include('modules/quanlyproduct/listed.php');
+    } else if ($temp == 'quanlysanpham' && $query == 'edit') {
+        include('modules/quanlyproduct/edit.php');
+    } else if ($temp == 'quanlydanhmuc' && $query == 'add') { //quản lý danh mục
         include('modules/quanlycategory/add.php');
         include('modules/quanlycategory/listed.php');
     } else if ($temp == 'quanlydanhmuc' && $query == 'edit') {

@@ -1,25 +1,63 @@
 <?php 
-    $sql_edit_category = "SELECT * FROM category WHERE id_category='$_GET[idcategory]' LIMIT 1";
-    $query_edit_category = mysqli_query($conn, $sql_edit_category);
+    $sql_edit_product = "SELECT * FROM product WHERE id_product='$_GET[idproduct]' LIMIT 1";
+    $query_edit_product = mysqli_query($conn, $sql_edit_product);
 ?>
 
-
 <div class="container">
-    <h2>Sửa danh mục sản phẩm</h2>
-    <form method="POST" id="categoryForm" action="modules/quanlycategory/handle.php?idcategory=<?= $_GET['idcategory']; ?>">
-        <?php
-            while($row = mysqli_fetch_array($query_edit_category)) {
+    <h2>Sửa sản phẩm</h2>
+    <form method="POST" id="productForm" action="modules/quanlyproduct/handle.php?idproduct=<?= $_GET['idproduct']; ?>" enctype="multipart/form-data">
+        <?php 
+            while($row = mysqli_fetch_array($query_edit_product)) {
         ?>
-        <div class="mb-3">
-            <label for="categoryName" class="form-label">Tên danh mục:</label>
-            <input type="text" class="form-control" id="categoryName" name="categoryName" required value="<?= $row['category_name'] ?>">
-        </div>
-        <div class="mb-3">
-            <label for="categoryNumber" class="form-label">Thứ tự danh mục:</label>
-            <input type="text" class="form-control" id="categoryNumber" name="categoryNumber" required value="<?= $row['stt'] ?>">
-        </div>
-        <button type="submit" name="editcategory" class="btn btn-warning">Update</button>
+            <div class="mb-3">
+                <label for="productName" class="form-label">Tên sản phẩm:</label>
+                <input type="text" class="form-control" id="productName" name="productName" required value="<?= $row['title'] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="productImage" class="form-label">Hình ảnh:</label>
+                <input type="file" class="form-control mb-2" id="productImage" name="productImage">
+                <img src="modules/quanlyproduct/uploads/<?= $row['images']; ?>" alt="" class="img-fluid" style="width: 200px;">
+            </div>
+            <div class="mb-3">
+                <label for="productImage2" class="form-label">Hình ảnh hover:</label>
+                <input type="file" class="form-control mb-2" id="productImage2" name="productImage2">
+                <img src="modules/quanlyproduct/uploads/<?= $row['images_hover']; ?>" alt="" class="img-fluid" style="width: 200px;">
+            </div>
+            <div class="mb-3">
+                <label for="productPrice" class="form-label">Giá mới:</label>
+                <input type="text" class="form-control" id="productPrice" name="productPrice" required value="<?= $row['price'] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="productPriceOld" class="form-label">Giá gốc:</label>
+                <input type="text" class="form-control" id="productPriceOld" name="productPriceOld" required value="<?= $row['old_price'] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="productQuantity" class="form-label">Số lượng:</label>
+                <input type="text" class="form-control" id="productQuantity" name="productQuantity" required value="<?= $row['quantity'] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="productDesc" class="form-label">Nội dung:</label>
+                <input type="text" class="form-control" id="productDesc" name="productDesc" required value="<?= $row['descript'] ?>">
+            </div>
+            <div class="mb-3">
+                <label for="productStatus" class="form-label">Tình trạng:</label>
+                <select class="form-select" name="productStatus">
+                    <?php
+                        if ($row['statuser'] == 1) { 
+                    ?>
+                            <option value="1" selected>Kích hoạt</option>
+                            <option value="0">Ẩn</option>
+                    <?php 
+                        } else {
+                    ?>
+                            <option value="1">Kích hoạt</option>
+                            <option value="0" selected>Ẩn</option>
+                    <?php } ?>
+                </select>
+            </div>
+            <button type="submit" name="editproduct" class="btn btn-warning">Update</button>
         <?php } ?>
     </form>
 
 </div>
+
