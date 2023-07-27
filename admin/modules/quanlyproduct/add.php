@@ -30,6 +30,18 @@
             <input type="text" class="form-control" id="productDesc" name="productDesc" required>
         </div>
         <div class="mb-3">
+            <label for="productStatus" class="form-label">Danh mục navbar:</label>
+            <select class="form-select" name="productCategory">
+                <?php
+                    $sql_category = "SELECT * FROM category ORDER BY id_category ASC";
+                    $query_category = mysqli_query($conn, $sql_category);
+                    while($row_category = mysqli_fetch_array($query_category)) {
+                ?>
+                    <option value="<?= $row_category['id_category'] ?>"><?= $row_category['category_name'] ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="productStatus" class="form-label">Tình trạng:</label>
             <select class="form-select" name="productStatus">
                 <option value="1">Kích hoạt</option>

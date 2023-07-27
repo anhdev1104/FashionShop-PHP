@@ -7,6 +7,11 @@
     <title>SIXDO Admin</title>
     <!-- Link to Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <style>
+        td {
+            word-wrap: break-word;
+        }
+</style>
 </head>
 
 <body>

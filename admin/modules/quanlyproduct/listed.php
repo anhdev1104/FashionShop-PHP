@@ -1,12 +1,12 @@
 <?php 
-    $sql_get_product = "SELECT * FROM product ORDER BY id_product DESC";
+    $sql_get_product = "SELECT * FROM product,category WHERE product.category_id = category.id_category ORDER BY id_product DESC";
     $query_get_product = mysqli_query($conn, $sql_get_product);
 ?>
 
 <div class="container mt-5">
     <h2>Danh sách sản phẩm</h2>
 
-    <table class="table table-striped table-bordered table-responsive-md">
+    <table class="table table-striped table-bordered table-responsive">
         <thead class="table-primary text-center">
             <tr>
                 <th scope="col">ID</th>
@@ -16,6 +16,7 @@
                 <th scope="col">Giá</th>
                 <th scope="col">Giá gốc</th>
                 <th scope="col">Số lượng</th>
+                <th scope="col">Danh mục navbar</th>
                 <th scope="col">Description</th>
                 <th scope="col">Trạng thái</th>
                 <th scope="col">Quản lý</th>
@@ -39,6 +40,7 @@
                         <td><?= number_format($row['price']).'đ'; ?></td>
                         <td><?= number_format($row['old_price']).'đ'; ?></td>
                         <td><?= $row['quantity']; ?></td>
+                        <td><?= $row['category_name']; ?></td>
                         <td><?= $row['descript']; ?></td>
                         <td>
                             <?php 
