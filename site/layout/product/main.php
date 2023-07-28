@@ -11,7 +11,7 @@
                 }
                 if ($temp == 'sanphamgiamgia') {
                     include('main/saleproduct.php');
-                } else if ($temp == 'phukien$id=2') {
+                } else if ($temp == 'phukien') {
                     include('main/accessory.php');
                 } else {
                     include('main/index.php');

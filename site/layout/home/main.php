@@ -1,97 +1,36 @@
+<?php
+$sql_category = "SELECT * FROM category ORDER BY id_category LIMIT 1";
+$query_category = mysqli_query($conn, $sql_category);
+$first_category = mysqli_fetch_array($query_category);
+// Render sản phẩm
+// Câu truy vấn con - lấy ID nhỏ nhất từ cột id_khoa_ngoai
+$subquery = "SELECT MIN(category_id) FROM product";
+// Câu truy vấn chính - lấy tất cả sản phẩm có ID bằng với ID nhỏ nhất tìm được từ truy vấn con
+$sql_product = "SELECT * FROM product WHERE product.category_id = ($subquery) GROUP BY id_product DESC LIMIT 8";
+$query_product = mysqli_query($conn, $sql_product);
+?>
+
 <section class="content">
     <h1 class="content-heading">
-        <a href="" class="content-heading-link">NEW ARRIVAL</a>
+        <a href="newproduct.php?menu=sanphamoi&id=<?= $first_category['id_category']; ?>" class="content-heading-link">NEW ARRIVAL</a>
     </h1>
     <div class="container">
         <div class="product-list wraper">
+            <?php
+                while($row_product = mysqli_fetch_array($query_product)) {
+            ?>
             <div class="product-item">
                 <a href="" class="product-link">
-                    <img src="./img/produc1.jpg" alt="" class="product-img">
-                    <img src="./img/produc1-2.jpg" alt="" class="product-img-hover">
+                    <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images']; ?>" alt="" class="product-img">
+                    <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images_hover']; ?>" alt="" class="product-img-hover">
                 </a>
                 <div class="product-price">
-                    <span class="new-price">3.496.000đ</span>
+                    <span class="new-price"><?= str_replace(',', '.', number_format($row_product['price'])).'đ'; ?></span>
                 </div>
-                <div class="product-name"><a href="">Chocolate-Brown Midi Dress With Flowers</a></div>
+                <div class="product-name"><a href=""><?= $row_product['title']; ?></a></div>
             </div>
-
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="./img/produc2.jpg" alt="" class="product-img">
-                    <img src="./img/produc2-2.jpg" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price">2.942.000đ</span>
-                </div>
-                <div class="product-name"><a href="">Brownish-beige Midi Dress With Flower</a></div>
-            </div>
-
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="./img/produc3.jpg" alt="" class="product-img">
-                    <img src="./img/produc3-2.jpg" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price">2.896.000đ</span>
-                </div>
-                <div class="product-name"><a href="">Mallard Green Midi Dress</a></div>
-            </div>
-
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="./img/product4.jpg" alt="" class="product-img">
-                    <img src="./img/product4-2.jpg" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price">2.942.000đ</span>
-                </div>
-                <div class="product-name"><a href="">Dark Pink Mini Dress With Flower</a></div>
-            </div>
-
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="./img/product5.jpg" alt="" class="product-img">
-                    <img src="./img/product5-2.jpg" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price">2.996.000đ</span>
-                </div>
-                <div class="product-name"><a href="">Orange & Black Midi Dress</a></div>
-            </div>
-
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="./img/product6.jpg" alt="" class="product-img">
-                    <img src="./img/product6-2.jpg" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price">2.254.000đ</span>
-                </div>
-                <div class="product-name"><a href="">Light Brow Bowtie Midi Dress</a></div>
-            </div>
-
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="./img/product7.jpg" alt="" class="product-img">
-                    <img src="./img/product7-2.jpg" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price">2.896.000đ</span>
-                </div>
-                <div class="product-name"><a href="">Waxen Midi Dress With Bow</a></div>
-            </div>
-
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="./img/product8.jpg" alt="" class="product-img">
-                    <img src="./img/product8-2.jpg" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price">2.796.000đ</span>
-                </div>
-                <div class="product-name"><a href="">Magenta Ruffle Collar Midi Dress</a></div>
-            </div>
-        </div>
+            <?php } ?>
+        </div>    
     </div>
     <a href="" class="show-more">Xem thêm</a>
 

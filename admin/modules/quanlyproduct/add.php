@@ -27,7 +27,7 @@
         </div>
         <div class="mb-3">
             <label for="productDesc" class="form-label">Nội dung:</label>
-            <input type="text" class="form-control" id="productDesc" name="productDesc" required>
+            <input type="text" class="form-control" id="productDesc" name="productDesc">
         </div>
         <div class="mb-3">
             <label for="productStatus" class="form-label">Danh mục navbar:</label>

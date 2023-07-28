@@ -34,8 +34,8 @@ if (isset($_POST['addproduct'])) {
     // Kiểm tra và xử lý ảnh 1
     if (isset($_FILES['productImage']) && $_FILES['productImage']['error'] === UPLOAD_ERR_OK) {
         move_uploaded_file($image_product_tmp, 'uploads/'.$image_product);
-        unlink('uploads/'.$row['images']); // Xóa ảnh cũ
         $sql_update_product = "UPDATE product SET title='$name_product', images='$image_product', price='$price_product', old_price='$price2_product', quantity='$quantity_product', descript='$desc_product', statuser='$status_product', category_id='$category_product' WHERE id_product='$_GET[idproduct]'";
+        unlink('uploads/'.$row['images']); // Xóa ảnh cũ
     } else {
         // Giữ ảnh cũ
         $image_product = $row['images'];
@@ -45,8 +45,8 @@ if (isset($_POST['addproduct'])) {
     // Kiểm tra và xử lý ảnh 2
     if (isset($_FILES['productImage2']) && $_FILES['productImage2']['error'] === UPLOAD_ERR_OK) {
         move_uploaded_file($image_product2_tmp, 'uploads/'.$image_product2);
-        unlink('uploads/'.$row['images_hover']); // Xóa ảnh cũ
         $sql_update_product = "UPDATE product SET title='$name_product', images_hover='$image_product2', price='$price_product', old_price='$price2_product', quantity='$quantity_product', descript='$desc_product', statuser='$status_product', category_id='$category_product' WHERE id_product='$_GET[idproduct]'";
+        unlink('uploads/'.$row['images_hover']); // Xóa ảnh cũ
     }
 
     mysqli_query($conn, $sql_update_product);

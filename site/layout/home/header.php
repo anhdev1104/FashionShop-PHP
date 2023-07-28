@@ -21,28 +21,9 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
-            <div class="nav-menu">
-                <ul class="menu-list wraper">
-                    <li class="menu-item">
-                        <a href="./newproduct.php" class="item-link">SẢN PHẨM
-                            MỚI</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="item-link">SẢN PHẨM GIẢM
-                            GIÁ</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="item-link">PHỤ KIỆN</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="item-link">BỘ SƯU TẬP</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="" class="item-link">TRÌNH DIỄN
-                            THỜI TRANG</a>
-                    </li>
-                </ul>
-            </div>
+            
+            <!-- NAVBAR -->
+            <?php include('nav.php') ?>
         </div>
     </section>
 </header>
