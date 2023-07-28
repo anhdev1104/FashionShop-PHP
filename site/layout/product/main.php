@@ -9,7 +9,7 @@
                 } else {
                     $temp = '';
                 }
-                if ($temp == 'sanphamgiamgia$id=1') {
+                if ($temp == 'sanphamgiamgia') {
                     include('main/saleproduct.php');
                 } else if ($temp == 'phukien$id=2') {
                     include('main/accessory.php');

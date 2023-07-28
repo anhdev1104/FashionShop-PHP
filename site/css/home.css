@@ -62,6 +62,7 @@
     display: block;
     padding-bottom: 25px;
     position: relative;
+    text-transform: uppercase;
 }
 
 .item-link::after {

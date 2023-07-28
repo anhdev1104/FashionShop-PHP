@@ -21,28 +21,7 @@
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
-            <div class="nav-menu">
-                <ul class="menu-list wraper">
-                    <li class="menu-item">
-                        <a href="newproduct.php" class="item-link menu-active">SẢN PHẨM
-                            MỚI</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="newproduct.php?menu=sanphamgiamgia$id=1" class="item-link">SẢN PHẨM GIẢM
-                            GIÁ</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="newproduct.php?menu=phukien$id=2" class="item-link">PHỤ KIỆN</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="newproduct.php?menu=bosuutap" class="item-link">BỘ SƯU TẬP</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="newproduct.php?menu=trinhdienthoitrang" class="item-link">TRÌNH DIỄN
-                            THỜI TRANG</a>
-                    </li>
-                </ul>
-            </div>
+            <?php include('nav.php'); ?>
         </div>
     </section>
 </header>

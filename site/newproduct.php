@@ -12,7 +12,8 @@
 </head>
 <body>
     <div class="app">
-        <?php 
+        <?php
+            include('../config/connect.php');
             include('./layout/product/header.php');
             include('./layout/product/main.php');
             include('./layout/product/footer.php');

@@ -15,7 +15,7 @@ if (isset($_POST['addcategory'])) {
 } else {
     // delete
     $id = $_GET['idcategory'];
-    $sql_delete = "DELETE FROM category WHERE id_category='" . $id . "'";
+    $sql_delete = "DELETE FROM category WHERE id_category='$id'";
     mysqli_query($conn, $sql_delete);
     header('Location: ../../index.php?action=quanlydanhmuc&query=add');
 }
