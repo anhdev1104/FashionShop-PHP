@@ -21,6 +21,7 @@
 <div class="product-list wraper">
     <?php
         while($row_product = mysqli_fetch_array($query_product)) {
+            if ($row_product['statuser'] == 1) {
     ?>
         <div class="product-item">
             <a href="" class="product-link">
@@ -37,7 +38,7 @@
             </div>
             <div class="product-name"><a href=""><?= $row_product['title']; ?></a></div>
         </div>
-    <?php } ?>
+    <?php }} ?>
 </div>
 <div class="pagination">
     <a href="" class="page page-active">1</a>

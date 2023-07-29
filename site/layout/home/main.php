@@ -17,22 +17,23 @@ $query_product = mysqli_query($conn, $sql_product);
     <div class="container">
         <div class="product-list wraper">
             <?php
-                while($row_product = mysqli_fetch_array($query_product)) {
+            while ($row_product = mysqli_fetch_array($query_product)) {
             ?>
-            <div class="product-item">
-                <a href="" class="product-link">
-                    <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images']; ?>" alt="" class="product-img">
-                    <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images_hover']; ?>" alt="" class="product-img-hover">
-                </a>
-                <div class="product-price">
-                    <span class="new-price"><?= str_replace(',', '.', number_format($row_product['price'])).'đ'; ?></span>
+                <div class="product-item">
+                    <a href="" class="product-link">
+                        <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images']; ?>" alt="" class="product-img">
+                        <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images_hover']; ?>" alt="" class="product-img-hover">
+                    </a>
+                    <div class="product-price">
+                        <span class="new-price"><?= str_replace(',', '.', number_format($row_product['price'])) . 'đ'; ?></span>
+                    </div>
+                    <div class="product-name"><a href=""><?= $row_product['title']; ?></a></div>
                 </div>
-                <div class="product-name"><a href=""><?= $row_product['title']; ?></a></div>
-            </div>
+
             <?php } ?>
-        </div>    
+        </div>
     </div>
-    <a href="" class="show-more">Xem thêm</a>
+    <a href="newproduct.php?menu=sanphamoi&id=<?= $first_category['id_category']; ?>" class="show-more">Xem thêm</a>
 
 </section>
 <section class="instagram container">

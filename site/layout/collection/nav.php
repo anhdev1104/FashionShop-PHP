@@ -3,6 +3,7 @@ $sql_category = "SELECT * FROM category ORDER BY id_category ASC";
 $query_category = mysqli_query($conn, $sql_category);
 ?>
 
+
 <div class="nav-menu">
     <ul class="menu-list wraper">
         <?php
@@ -13,7 +14,7 @@ $query_category = mysqli_query($conn, $sql_category);
             </li>
         <?php } ?>
         <li class="menu-item">
-            <a href="collection.php" class="item-link">BỘ SƯU TẬP</a>
+            <a href="#" class="item-link">BỘ SƯU TẬP</a>
         </li>
         <li class="menu-item">
             <a href="fashionshow.php" class="item-link">TRÌNH DIỄN

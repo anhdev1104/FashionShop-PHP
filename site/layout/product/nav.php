@@ -13,10 +13,10 @@
         </li>
         <?php } ?>
         <li class="menu-item">
-            <a href="newproduct.php?menu=bosuutap" class="item-link">BỘ SƯU TẬP</a>
+            <a href="collection.php" class="item-link">BỘ SƯU TẬP</a>
         </li>
         <li class="menu-item">
-            <a href="newproduct.php?menu=trinhdienthoitrang" class="item-link">TRÌNH DIỄN
+            <a href="fashionshow.php" class="item-link">TRÌNH DIỄN
                 THỜI TRANG</a>
         </li>
     </ul>

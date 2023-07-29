@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const sliderMain = this.document.querySelector('.slider_main')
     const sliderItems = this.document.querySelectorAll('.slider_item')
     const sliderItemWidth = sliderItems[0].offsetWidth
@@ -18,21 +18,23 @@ window.addEventListener('load', function() {
 const heartIcons = document.querySelectorAll('.heart-icon')
 
 function toggleHeart(event) {
-    const emptyHeart = event.target.classList.contains('heart');
-    const filledHeart = event.target.classList.contains('heartRed');
+    const emptyHeart = event.target.classList.contains('heart')
+    const filledHeart = event.target.classList.contains('heartRed')
 
     if (emptyHeart) {
-        event.target.style.display = 'none';
-        event.target.nextElementSibling.style.display = 'block';
+        event.target.style.display = 'none'
+        event.target.nextElementSibling.style.display = 'block'
     } else if (filledHeart) {
-        event.target.style.display = 'none';
-        event.target.previousElementSibling.style.display = 'block';
+        event.target.style.display = 'none'
+        event.target.previousElementSibling.style.display = 'block'
     }
 }
 
 heartIcons.forEach((heartIcon) => {
     heartIcon.addEventListener('click', toggleHeart);
 });
+
+
 
 
 
