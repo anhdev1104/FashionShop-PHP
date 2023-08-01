@@ -3,7 +3,7 @@ $sql_category = "SELECT * FROM category ORDER BY id_category LIMIT 1";
 $query_category = mysqli_query($conn, $sql_category);
 $first_category = mysqli_fetch_array($query_category);
 // Render sản phẩm
-// Câu truy vấn con - lấy ID nhỏ nhất từ cột id_khoa_ngoai
+// Câu truy vấn con - lấy ID nhỏ nhất từ cột category_id
 $subquery = "SELECT MIN(category_id) FROM product";
 // Câu truy vấn chính - lấy tất cả sản phẩm có ID bằng với ID nhỏ nhất tìm được từ truy vấn con
 $sql_product = "SELECT * FROM product WHERE product.category_id = ($subquery) GROUP BY id_product DESC LIMIT 8";
@@ -20,7 +20,7 @@ $query_product = mysqli_query($conn, $sql_product);
             while ($row_product = mysqli_fetch_array($query_product)) {
             ?>
                 <div class="product-item">
-                    <a href="" class="product-link">
+                    <a href="newproduct.php?menu=chitietsanpham&id=<?= $row_product['id_product']; ?>" class="product-link">
                         <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images']; ?>" alt="" class="product-img">
                         <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images_hover']; ?>" alt="" class="product-img-hover">
                     </a>

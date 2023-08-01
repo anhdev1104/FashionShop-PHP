@@ -34,8 +34,26 @@ heartIcons.forEach((heartIcon) => {
     heartIcon.addEventListener('click', toggleHeart);
 });
 
+//show box modal (tìm đúng kích thước)
+const modalSize = document.querySelector('#modal-size')
+const overlayModal = document.querySelector('#overlay')
+const closeIcon = document.querySelector('#close-icon')
+const boxModal = document.querySelector('#box-size')
 
+modalSize.addEventListener('click', () => {
+    overlayModal.style.display = 'flex'
+})
 
+closeIcon.addEventListener('click', () => {
+    overlayModal.style.display = 'none'
+})
+
+overlayModal.addEventListener('click', () => {
+    overlayModal.style.display = 'none'
+})
+boxModal.addEventListener('click', (e) => {
+    e.stopPropagation();
+})
 
 
 

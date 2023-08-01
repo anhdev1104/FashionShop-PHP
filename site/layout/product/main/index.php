@@ -24,7 +24,7 @@
             if ($row_product['statuser'] == 1) {
     ?>
         <div class="product-item">
-            <a href="" class="product-link">
+            <a href="newproduct.php?menu=chitietsanpham&id=<?= $row_product['id_product']; ?>" class="product-link">
                 <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images']; ?>" alt="" class="product-img">
                 <img src="../admin/modules/quanlyproduct/uploads/<?= $row_product['images_hover']; ?>" alt="" class="product-img-hover">
             </a>

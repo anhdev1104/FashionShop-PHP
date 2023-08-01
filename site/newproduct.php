@@ -16,6 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/newproduct.css">
+    <link rel="stylesheet" href="./css/productdetails.css">
 </head>
 <body>
     <div class="app">

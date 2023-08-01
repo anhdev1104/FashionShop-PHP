@@ -24,10 +24,22 @@
             <?php include('nav.php'); ?>
         </div>
     </section>
+
 </header>
 
-<section class="product-banner container">
-    <a href="" class="product-banner-link">
-        <img src="./img/banner3.webp" alt="" class="product-banner-img">
-    </a>
-</section>
+
+<?php
+    if (isset($_GET['menu'])) {
+        $temp = $_GET['menu'];
+    } else {
+        $temp = '';
+    }
+
+    if ($temp != 'chitietsanpham') {
+?>
+    <section class="product-banner container">
+        <a href="" class="product-banner-link">
+            <img src="./img/banner3.webp" alt="" class="product-banner-img">
+        </a>
+    </section>
+<?php } ?>
