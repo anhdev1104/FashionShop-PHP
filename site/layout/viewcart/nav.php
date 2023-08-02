@@ -14,7 +14,7 @@ $query_category = mysqli_query($conn, $sql_category);
             </li>
         <?php } ?>
         <li class="menu-item">
-            <a href="#" class="item-link">BỘ SƯU TẬP</a>
+            <a href="collection.php" class="item-link">BỘ SƯU TẬP</a>
         </li>
         <li class="menu-item">
             <a href="fashionshow.php" class="item-link">TRÌNH DIỄN

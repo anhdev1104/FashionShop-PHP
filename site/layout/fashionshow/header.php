@@ -17,9 +17,9 @@
                 </div>
                 <div class="above-item wraper">VN</div>
                 <div class="above-item wraper">EN</div>
-                <div class="above-item wraper">
+                <a title="Giỏ hàng" href="viewcart.php" class="above-item wraper">
                     <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                </a>
             </div>
 
             <!-- MENU -->

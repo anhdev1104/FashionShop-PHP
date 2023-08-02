@@ -24,11 +24,3 @@
 
 ?> 
 
-<!-- } else if ($temp == 'quanlydonhang') {
-        
-    } else if ($temp == 'caidat') {
-        
-    } else if ($temp == 'dangxuat') {
-         -->
-
-

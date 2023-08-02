@@ -7,7 +7,8 @@
     $row_title = mysqli_fetch_array($query_category);
 ?>
 
-<div class="list-product-head wraper">
+    <form action="">
+    <div class="list-product-head wraper">
     <div class="product-head-wrap wraper">
         <p class="category-title"><?= $row_title['category_name']; ?></p>
         <span>(486 Item)</span>
@@ -40,6 +41,7 @@
         </div>
     <?php }} ?>
 </div>
+    </form>
 <div class="pagination">
     <a href="" class="page page-active">1</a>
     <a href="" class="page">2</a>

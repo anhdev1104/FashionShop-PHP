@@ -53,7 +53,7 @@
                         </td>
                         <td class="">
                             <a href="?action=quanlysanpham&query=edit&idproduct=<?= $row['id_product']; ?>" class="nav-link btn btn-warning mb-2">EDIT</a>
-                            <a href="modules/quanlyproduct/handle.php?idproduct=<?= $row['id_product']; ?>" class="nav-link btn btn-danger">DELETE</a>
+                            <a href="modules/quanlyproduct/handle.php?idproduct=<?= $row['id_product']; ?>" class="nav-link btn btn-danger" onclick="return confirm('Bạn chắc chắn muốn xoá ?')">DELETE</a>
                         </td>
                     </tr>
             <?php } ?>

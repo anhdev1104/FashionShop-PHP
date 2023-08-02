@@ -1,5 +1,5 @@
 <?php
-    $sql_category = "SELECT * FROM category ORDER BY id_category ASC";
+    $sql_category = "SELECT * FROM category ORDER BY stt ASC";
     $query_category = mysqli_query($conn, $sql_category);
 ?>
 

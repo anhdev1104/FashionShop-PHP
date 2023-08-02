@@ -27,7 +27,7 @@
                         <td><?= $row['stt']; ?></td>
                         <td class="d-flex">
                             <a href="?action=quanlydanhmuc&query=edit&idcategory=<?= $row['id_category']; ?>" class="nav-link btn btn-warning mx-2">EDIT</a>
-                            <a href="modules/quanlycategory/handle.php?idcategory=<?= $row['id_category']; ?>" class="nav-link btn btn-danger mx-2">DELETE</a>
+                            <a href="modules/quanlycategory/handle.php?idcategory=<?= $row['id_category']; ?>" class="nav-link btn btn-danger mx-2" onclick="return confirm('Bạn chắc chắn muốn xoá ?')">DELETE</a>
                         </td>
                     </tr>
             <?php } ?>

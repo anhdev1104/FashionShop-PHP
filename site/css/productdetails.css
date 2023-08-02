@@ -210,6 +210,9 @@
 }
 
 .decrement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -231,6 +234,9 @@
 }
 
 .increment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     cursor: pointer;
@@ -246,6 +252,9 @@
     line-height: 50px;
     display: block;
     color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
     background-color: var(--second-color);
     font-weight: 300;
     text-align: center;
