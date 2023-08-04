@@ -1,3 +1,13 @@
+<?php 
+    session_start();
+
+    if(isset($_GET['dangxuatuser']) && $_GET['dangxuatuser'] == 1)  {
+        unset($_SESSION['register']);
+        unset($_SESSION['login_user']);
+        header('Location: ../admin/login.php');
+    }
+?>
+
 <header class="header">
     <section class="header-top container wraper">
         <div class="header-logo">
@@ -7,10 +17,19 @@
         </div>
         <div class="header-nav">
             <div class="nav-above wraper">
-                <a href="./register.php" class="above-item wraper">
+                <div class="above-item wraper account">
                     <i class="fa-regular fa-user"></i>
-                    <span>LOGIN</span>
-                </a>
+                    <span class="account-name"> Hi! 
+                        <?php  
+                            if(isset($_SESSION['register'])) {
+                                echo $_SESSION['register'];
+                            } else if (isset($_SESSION['login_user'])) {
+                                echo $_SESSION['login_user'];
+                            } 
+                        ?>
+                    </span>
+                    <a href="index.php?dangxuatuser=1" class="page-logout">Đăng xuất</a>
+                </div>
                 <div class="above-item wraper">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Tìm kiếm</span>

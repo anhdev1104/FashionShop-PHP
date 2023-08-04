@@ -1,3 +1,24 @@
+<?php 
+    session_start();
+    include('../config/connect.php');
+
+    if (isset($_POST['register'])) {
+        $name_user = $_POST['fullname'];
+        $email_user = $_POST['email'];
+        $phone_user = $_POST['phonenumber'];
+        $password_user = md5($_POST['password']);
+
+        $sql_register = "INSERT INTO user(fullname, email, phonenumber, password) VALUE ('$name_user', '$email_user', '$phone_user', '$password_user')";
+        $query_register = mysqli_query($conn, $sql_register);
+
+        if ($query_register) {
+            $_SESSION['register'] = $name_user;
+            header('Location: ../site/index.php');
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +28,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="../site/css/base.css">
+    <link rel="stylesheet" href="../site/css/register.css">
 </head>
 <body>
     <div class="app">
         <main class="register wraper">
             <section class="register-left">
-                <img src="./img/register.jpg" alt="" class="register-img">
+                <img src="../site/img/register.jpg" alt="" class="register-img">
             </section>
             <section class="register-right">
                 <h1 class="register-heading">ĐĂNG KÍ TÀI KHOẢN</h1>
@@ -29,15 +50,15 @@
                         <input type="email" name="email" id="email" class="input" placeholder="Email đăng nhập" required>
                     </div>
                     <div class="form-group">
+                        <label for="phonenumber" class="title">Số điện thoại</label>
+                        <input type="tel" name="phonenumber" id="phonenumber" class="input" placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                    <div class="form-group">
                         <label for="password" class="title">Mật khẩu</label>
                         <input type="password" name="password" id="password" class="input" placeholder="Nhập tối thiểu 6 kí tự" required>
                     </div>
-                    <div class="form-group">
-                        <label for="confirmpassword" class="title">Nhập lại mật khẩu</label>
-                        <input type="password" name="confirmpassword" id="confirmpassword" class="input" placeholder="Nhập lại mật khẩu" required>
-                    </div>
                     <a href="./login.php" class="register-link">Bạn đã có tài khoản</a>
-                    <button type="submit" name="register" class="btn-form">ĐĂNG KÝ</button>
+                    <button type="submit" name="register" class="btn-form" onclick="alert('Tạo tại khoản thành công !')">ĐĂNG KÝ</button>
                 </form>
             </section>
         </main>

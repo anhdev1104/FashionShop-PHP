@@ -1,5 +1,6 @@
-<?php include_once('../../project-php/config/connect.php'); ?>
-
+<?php 
+    include_once('../../project-php/config/connect.php'); 
+?>
 
 
 

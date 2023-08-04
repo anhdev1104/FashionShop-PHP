@@ -23,7 +23,14 @@
 }
 
 .cart-head-item:last-child {
-    color: var(--second-color);
+    color: rgb(255, 66, 78);
+    cursor: pointer;
+    font-size: 18px;
+    transition: all .25s ease;
+}
+
+.cart-head-item:last-child:hover {
+    color: rgb(248, 140, 147);
 }
 
 .col-1,
@@ -78,7 +85,7 @@
 }
 
 .cart-total {
-    font-weight: 700;
+    font-weight: 500;
     color: rgb(255, 66, 78);
 }
 
@@ -88,10 +95,116 @@
 }
 
 .cart-delete:hover {
-    opacity: 0.7;
+    color: rgb(248, 140, 147);
 }
 
 .cart-null {
     padding: 100px 0;
     text-align: center;
+}
+
+.cart-bill {
+    /* margin-top: 40px; */
+    padding: 0 15px;
+    display: flex;
+    justify-content: end;
+    border-top: 1px solid var(--border-color);
+}
+
+.cart-bill-main {
+    width: 400px;
+    padding: 20px;
+}
+
+.bill-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* background-color: #fff; */
+}
+
+.bill-heading {
+    /* text-align: right; */
+    font-weight: 500;
+}
+
+.total-bill {
+    font-size: 2.2rem;
+    color: rgb(255, 66, 78);
+    font-weight: 700;
+}
+
+.bill-vat {
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-align: right;
+    display: block;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.freeship-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.freeship-img {
+    width: 80px;
+    height: 12px;
+    object-fit: cover;
+}
+
+.cart-buy {
+    width: 100%;
+    height: 50px;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 300;
+    background-color: var(--second-color);
+    color: #fff;
+    transition: all .25s ease-in-out;
+}
+
+.cart-buy:hover {
+    background-color: var(--hover-color);
+    font-weight: 700;
+}
+
+.toggle-quantity {
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border-color);
+    background-color: #fff;
+}
+
+.decrement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+.increment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
 }

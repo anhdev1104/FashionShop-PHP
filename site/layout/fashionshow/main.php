@@ -10,7 +10,6 @@
             <div class="collection-item">
                 <img src="./img/fashionshow3.jpg" alt="" class="collection-img">
             </div>
-            
         </div>
         <a href="" class="show-more">VIEW MORE +</a>
     </section>

@@ -49,15 +49,6 @@
                     
                 </div>
                 <div class="details-add wraper">
-                    <div class="toggle-quantity wraper">
-                        <div class="decrement">
-                            <i class="fa-solid fa-minus"></i>
-                        </div>
-                        <input type="text" class="quantity" value="1">
-                        <div class="increment">
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                    </div>
                     <input type="submit" name="addproductdetails" class="add-cart" value="THÊM VÀO GIỎ HÀNG">
                     <a href="" class="details-heart">
                         <i class="fa-regular fa-heart heart-icon heart-details"></i>

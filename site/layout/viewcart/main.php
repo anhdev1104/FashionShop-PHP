@@ -7,44 +7,68 @@
             <span class="cart-head-item col-3">Đơn giá</span>
             <span class="cart-head-item col-4">Số lượng</span>
             <span class="cart-head-item col-5">Thành tiền</span>
-            <span class="cart-head-item col-6">
+            <a href="layout/product/main/cart.php?xoatatca=1" title="Xoá tất cả" class="cart-head-item col-6" >
                 <i class="fa-solid fa-trash"></i>
-            </span>
+            </a>
         </div>
 
         <?php
-            if (isset($_SESSION['cart'])) {
-                $i = 0;
-                $totalBill = 0;
-                foreach($_SESSION['cart'] as $cart_item) {
-                    $i++;
-                    $total = $cart_item['price'] * $cart_item['quantity'];
-                    $totalBill += $total; 
+        if (isset($_SESSION['cart'])) {
+            $i = 0;
+            $totalBill = 0;
+            foreach ($_SESSION['cart'] as $cart_item) {
+                $i++;
+                $total = $cart_item['price'] * $cart_item['quantity'];
+                $totalBill += $total;
         ?>
-        <div class="cart-item wraper">
-            <span class="cart-stt col-1"><?= $i ?></span>
-            <div class="cart-product col-2 wraper">
-                <div class="product-img-box">
-                    <img src="../admin/modules/quanlyproduct/uploads/<?= $cart_item['imageProduct']; ?>" alt="" class="cart-product-img">
+                <div class="cart-item wraper">
+                    <span class="cart-stt col-1"><?= $i ?></span>
+                    <div class="cart-product col-2 wraper">
+                        <div class="product-img-box">
+                            <img src="../admin/modules/quanlyproduct/uploads/<?= $cart_item['imageProduct']; ?>" alt="" class="cart-product-img">
+                        </div>
+                        <span class="cart-name"><?= $cart_item['nameProduct']; ?></span>
+                    </div>
+                    <span class="cart-price col-3"><?= str_replace(',', '.', number_format($cart_item['price'])) . 'đ'; ?></span>
+
+                    <div class="toggle-quantity wraper col-4">
+                        <a href="layout/product/main/cart.php?tru=<?= $cart_item['id']; ?>" class="decrement">
+                            <i class="fa-solid fa-minus"></i>
+                        </a>
+                        <span class="cart-quantity"><?= $cart_item['quantity']; ?></span>
+                        <a href="layout/product/main/cart.php?cong=<?= $cart_item['id']; ?>" class="increment">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                    <span class="cart-total col-5"><?= str_replace(',', '.', number_format($total)) . 'đ' ?></span>
+                    <a href="layout/product/main/cart.php?xoa=<?= $cart_item['id']; ?>" title="Delete row" class="cart-delete col-6">
+                        <i class="fa-solid fa-trash"></i>
+                    </a>
                 </div>
-                <span class="cart-name"><?= $cart_item['nameProduct']; ?></span>
+            <?php
+            }
+            ?>
+            <div class="cart-bill">
+                <div class="cart-bill-main">
+                    <div class="bill-block">
+                        <h3 class="bill-heading">Tổng tiền</h3>
+                        <span class="total-bill"><?= str_replace(',', '.', number_format($totalBill)) . 'đ'; ?></span>
+                    </div>
+                    <span class="bill-vat">(Đã bao gồm VAT nếu có)</span>
+                    <div class="freeship-block">
+                        <img src="./img/freeship.png" alt="" class="freeship-img">
+                        <span class="freeship-plus">đã được áp dụng!</span>
+                    </div>
+                    <button class="cart-buy">MUA HÀNG</button>
+                </div>
             </div>
-            <span class="cart-price col-3"><?= str_replace(',', '.', number_format($cart_item['price'])).'đ'; ?></span>
-            <span class="cart-stt col-4">
-                    <?= $cart_item['quantity']; ?>
-            </span>
-            <span class="cart-total col-5"><?=str_replace(',', '.', number_format($total)).'đ'?></span>
-            <span title="Delete" class="cart-delete col-6">
-                <i class="fa-solid fa-trash"></i>
-            </span>
-        </div>
-        <?php 
-                }
-            } else {
+
+        <?php
+        } else {
         ?>
             <p class="cart-null">Không có sản phẩm nào trong giỏ hàng của bạn.</p>
-        <?php 
-            }
+        <?php
+        }
         ?>
     </section>
 

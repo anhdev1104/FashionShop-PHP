@@ -1,4 +1,10 @@
-<!-- Navbar -->
+<?php 
+    if(isset($_GET['dangxuat']) && $_GET['dangxuat'] == 1)  {
+        unset($_SESSION['login']);
+        header('Location: ./login.php');
+    }
+?>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <!-- Navbar brand/logo -->
@@ -28,10 +34,7 @@
                     <a class="nav-link" href="index.php?action=quanlykhachhang&query=add">Customers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=caidat&query=add">Settings</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=dangxuat&query=add">Logout</a>
+                    <a class="nav-link" href="index.php?dangxuat=1">Logout</a>
                 </li>
             </ul>
         </div>

@@ -47,6 +47,43 @@
     border-right: 1px solid var(--line-color);
 }
 
+.account {
+    position: relative;
+
+}
+
+.account::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 120px;
+    height: 15px;
+    opacity: 0;
+}
+
+.above-item:first-child:hover .page-logout {
+    display: block;
+}
+
+.page-logout {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    width: 140px;
+    text-align: center;
+    display: block;
+    background-color: #fff;
+    padding: 8px 0;
+    z-index: 9999;
+    display: none;
+}
+
+.page-logout:hover {
+    color: var(--hover-color);
+    font-weight: 700;
+}
+
 .menu-list {
     margin: 0;
     padding-top: 15px;
