@@ -59,7 +59,7 @@
                         <img src="./img/freeship.png" alt="" class="freeship-img">
                         <span class="freeship-plus">đã được áp dụng!</span>
                     </div>
-                    <button class="cart-buy">MUA HÀNG</button>
+                    <a href="layout/product/main/pay.php" class="cart-buy">MUA HÀNG</a>
                 </div>
             </div>
 

@@ -1,0 +1,43 @@
+.thankbuy {
+    margin-top: 85.8px;
+    padding: 50px 0;
+}
+
+.thankbuy-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.thankbuy-heading {
+    text-align: center;
+    margin-top: 20px;
+    color: #00EE00;
+}
+
+.thankbuy-desc {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 300;
+    margin-top: 15px;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.thankbuy-icon {
+    color: #EEEE00;
+}
+
+.thankbuy-text {
+    display: block;
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 700;
+    transition: color .25s ease;
+}
+
+.thankbuy-text:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}

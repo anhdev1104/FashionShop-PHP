@@ -20,6 +20,7 @@ if (isset($_POST['login'])) {
         header('Location: index.php');
     } else if ($user_account) {
         $_SESSION['login_user'] = $user_account['fullname'];
+        $_SESSION['id_user'] = $user_account['id_user'];
         header('Location: ../site/index.php');
     } else {
         $_SESSION['login_error'] = true;

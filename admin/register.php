@@ -6,13 +6,15 @@
         $name_user = $_POST['fullname'];
         $email_user = $_POST['email'];
         $phone_user = $_POST['phonenumber'];
+        $address_user = $_POST['address'];
         $password_user = md5($_POST['password']);
 
-        $sql_register = "INSERT INTO user(fullname, email, phonenumber, password) VALUE ('$name_user', '$email_user', '$phone_user', '$password_user')";
+        $sql_register = "INSERT INTO user(fullname, email, phonenumber, address, password) VALUE ('$name_user', '$email_user', '$phone_user', '$address_user', '$password_user')";
         $query_register = mysqli_query($conn, $sql_register);
 
         if ($query_register) {
             $_SESSION['register'] = $name_user;
+            $_SESSION['id_user'] = mysqli_insert_id($conn);
             header('Location: ../site/index.php');
         }
     }
@@ -51,7 +53,11 @@
                     </div>
                     <div class="form-group">
                         <label for="phonenumber" class="title">Số điện thoại</label>
-                        <input type="tel" name="phonenumber" id="phonenumber" class="input" placeholder="Nhập lại mật khẩu" required>
+                        <input type="tel" name="phonenumber" id="phonenumber" class="input" placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="title">Địa chỉ</label>
+                        <input type="address" name="address" id="address" class="input" placeholder="VD: 575 Tôn Đức Thắng, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng" required>
                     </div>
                     <div class="form-group">
                         <label for="password" class="title">Mật khẩu</label>
