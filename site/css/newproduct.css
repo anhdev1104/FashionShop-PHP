@@ -322,11 +322,6 @@
     cursor: pointer;
 }
 
-.page.page-active {
-    background-color: var(--second-color);
-    color: var(--primary-color);
-}
-
 .page:hover {
     background-color: var(--second-color);
     color: var(--primary-color);
