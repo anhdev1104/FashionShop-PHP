@@ -21,7 +21,7 @@
         <?php
             include('layout/collection/header.php');
             include('layout/collection/main.php');
-            include('layout/collection/footer.php');
+            include('./layout/home/footer.php'); 
         ?>
     </div>
 

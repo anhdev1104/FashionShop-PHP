@@ -54,6 +54,7 @@
     font-weight: 300;
     text-align: center;
     display: block;
+    margin-bottom: 25px;
 }
 
 .register-link:hover {

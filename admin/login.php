@@ -4,7 +4,7 @@ include('../config/connect.php');
 
 if (isset($_POST['login'])) {
     $username = $_POST['email'];
-    $password = md5($_POST['password']);
+    $password = md5($_POST['password']); // PASS: 123456
 
     $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password' LIMIT 1";
     $row = mysqli_query($conn, $sql);
@@ -66,6 +66,7 @@ if (isset($_POST['login'])) {
                         <label for="password" class="title">Mật khẩu</label>
                         <input type="password" name="password" id="password" class="input" placeholder="Nhập tối thiểu 6 kí tự" required>
                     </div>
+                    <a href="./changepass.php" class="register-link">Đổi mật khẩu.</a>
                     <a href="./register.php" class="register-link">Đăng ký tài khoản !</a>
                     <button type="submit" name="login" class="btn-form">ĐĂNG NHẬP</button>
                 </form>

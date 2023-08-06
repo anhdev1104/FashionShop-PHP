@@ -23,7 +23,7 @@
         <?php
             include('layout/fashionshow/header.php');
             include('layout/fashionshow/main.php');
-            include('layout/fashionshow/footer.php');
+            include('./layout/home/footer.php'); 
         ?>
     </div>
 

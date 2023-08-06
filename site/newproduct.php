@@ -22,7 +22,7 @@
         <?php
             include('./layout/product/header.php');
             include('./layout/product/main.php');
-            include('./layout/product/footer.php');
+            include('./layout/home/footer.php'); 
         ?>
     </div>
 

@@ -22,7 +22,8 @@
         <?php
             include('layout/thanksbuy/header.php');
             include('layout/thanksbuy/main.php');
-            include('layout/thanksbuy/footer.php');
+            include('./layout/home/footer.php'); 
+
         ?>
     </div>
 
