@@ -7,9 +7,9 @@
 <section class="product-details">
     <form action="layout/product/main/cart.php?idsanpham=<?= $row_details['id_product']; ?>" method="POST">
         <div class="breadcrumb">
-            <a href="" class="breadcrumb-link">TRANG CHỦ</a>
-            <a href="" class="breadcrumb-link"><?= $row_details['category_name']; ?></a>
-            <a href="" class="breadcrumb-link"><?= $row_details['title']; ?></a>
+            <a href="#!" class="breadcrumb-link">TRANG CHỦ</a>
+            <a href="#!" class="breadcrumb-link"><?= $row_details['category_name']; ?></a>
+            <a href="#!" class="breadcrumb-link"><?= $row_details['title']; ?></a>
         </div>
         <div class="main-details wraper">
             <div class="details-left">
@@ -31,9 +31,9 @@
                 </p>
                 <div class="details-options wraper">
                     <div class="options-size wraper">
-                        <a href="" class="item-option">S</a>
-                        <a href="" class="item-option">M</a>
-                        <a href="" class="item-option">L</a>
+                        <a href="#!" class="item-option">S</a>
+                        <a href="#!" class="item-option">M</a>
+                        <a href="#!" class="item-option">L</a>
                     </div>
                     <div class="modal-size" id="modal-size">
                         Tìm đúng kích thước →
@@ -50,9 +50,8 @@
                 </div>
                 <div class="details-add wraper">
                     <input type="submit" name="addproductdetails" class="add-cart" value="THÊM VÀO GIỎ HÀNG">
-                    <a href="" class="details-heart">
+                    <a href="#!" class="details-heart">
                         <i class="fa-regular fa-heart heart-icon heart-details"></i>
-                        <!-- <i class="fa-solid fa-heart heart-icon heartRed-details"></i> -->
                     </a>
                 </div>
                 <div class="details-description">

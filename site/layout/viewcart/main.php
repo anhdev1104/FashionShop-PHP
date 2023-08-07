@@ -59,7 +59,13 @@
                         <img src="./img/freeship.png" alt="" class="freeship-img">
                         <span class="freeship-plus">đã được áp dụng!</span>
                     </div>
-                    <a href="layout/product/main/pay.php" class="cart-buy">MUA HÀNG</a>
+                    <?php 
+                        if (isset($_SESSION['register']) || isset($_SESSION['login_user'])) {
+                            echo "<a href='layout/product/main/pay.php' class='cart-buy'>ĐẶT HÀNG</a>";
+                        } else {
+                            echo "<a href='../admin/register.php' class='cart-buy'>ĐĂNG KÍ TÀI KHOẢN ĐỂ ĐẶT HÀNG</a>";
+                        }
+                    ?>
                 </div>
             </div>
 

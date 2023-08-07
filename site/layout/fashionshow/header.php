@@ -19,17 +19,20 @@
             <div class="nav-above wraper">
                 <div class="above-item wraper account">
                     <i class="fa-regular fa-user"></i>
-                    <span class="account-name"> Hi! 
+                    <div class="account-name"> 
                         <?php  
                             if(isset($_SESSION['register'])) {
-                                echo $_SESSION['register'];
+                                echo "Hi! ".$_SESSION['register'];
                             } else if (isset($_SESSION['login_user'])) {
-                                echo $_SESSION['login_user'];
-                            } 
+                                echo "Hi! ".$_SESSION['login_user'];
+                            } else {
+                                echo "<a href='../admin/login.php'>Login</a>";
+                            }
                         ?>
-                    </span>
-                    <a href="index.php?dangxuatuser=1" class="page-logout">Đăng xuất</a>
+                    </div>
+                    <?= (isset($_SESSION['register']) || isset($_SESSION['login_user'])) ? '<a href="index.php?dangxuatuser=1" class="page-logout">Đăng xuất</a>' : '' ?>
                 </div>
+
                 <div class="above-item wraper">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Tìm kiếm</span>
