@@ -28,7 +28,7 @@
                     <a class="nav-link" href="index.php?action=quanlydanhmuc&query=add">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=quanlydonhang&query=add">Orders</a>
+                    <a class="nav-link" href="index.php?action=quanlydonhang&query=lietke">Orders</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?action=quanlykhachhang&query=add">Customers</a>

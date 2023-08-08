@@ -37,7 +37,7 @@
             </div>
             <div class="mb-3">
                 <label for="productDesc" class="form-label">Nội dung:</label>
-                <input type="text" class="form-control" id="productDesc" name="productDesc" required value="<?= $row['descript'] ?>">
+                <input type="text" class="form-control" id="productDesc" name="productDesc" value="<?= $row['descript'] ?>">
             </div>
             <div class="mb-3">
                 <label for="productStatus" class="form-label">Danh mục navbar:</label>
@@ -47,16 +47,16 @@
                         $query_category = mysqli_query($conn, $sql_category);
                         while($row_category = mysqli_fetch_array($query_category)) {
                             if ($row_category['id_category'] == $row['category_id']) {
-                    ?>
+                        ?>
                                 <option selected value="<?= $row_category['id_category'] ?>"><?= $row_category['category_name'] ?></option>
-                    <?php
+                        <?php
                             } else {
-                    ?>
+                        ?>
                                 <option value="<?= $row_category['id_category'] ?>"><?= $row_category['category_name'] ?></option>
-                    <?php
+                        <?php
                             }
                         } 
-                    ?>
+                        ?>
                 </select>
             </div>
             <div class="mb-3">
@@ -70,8 +70,8 @@
                     <?php 
                         } else {
                     ?>
-                            <option value="1">Kích hoạt</option>
                             <option value="0" selected>Ẩn</option>
+                            <option value="1">Kích hoạt</option>
                     <?php } ?>
                 </select>
             </div>

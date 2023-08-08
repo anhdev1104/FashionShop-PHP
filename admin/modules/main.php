@@ -17,6 +17,10 @@
         include('modules/quanlycategory/listed.php');
     } else if ($temp == 'quanlydanhmuc' && $query == 'edit') {
         include('modules/quanlycategory/edit.php');
+    } else if ($temp == 'quanlydonhang' && $query == 'lietke') { // quản lý đơn hàng
+        include('modules/quanlyorder/listed.php');
+    } else if ($temp == 'donhang' && $query == 'xemdonhang') {
+        include('modules/quanlyorder/vieworder.php');
     } else{
         include('modules/dashboard.php');
     }
