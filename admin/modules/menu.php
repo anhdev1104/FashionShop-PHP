@@ -31,7 +31,7 @@
                     <a class="nav-link" href="index.php?action=quanlydonhang&query=lietke">Orders</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=quanlykhachhang&query=add">Customers</a>
+                    <a class="nav-link" href="index.php?action=quanlykhachhang&query=lietke">Customers</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?dangxuat=1">Logout</a>

@@ -21,6 +21,5 @@
                 </div>
             </div>
         </div>
-        <!-- Add more cards for other sections like Orders, Customers, etc. -->
     </div>
 </div>

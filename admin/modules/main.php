@@ -21,6 +21,10 @@
         include('modules/quanlyorder/listed.php');
     } else if ($temp == 'donhang' && $query == 'xemdonhang') {
         include('modules/quanlyorder/vieworder.php');
+    } else if ($temp == 'quanlykhachhang' && $query == 'lietke') { // quản lý Customers
+        include('modules/quanlycustomers/view.php');
+    } else if ($temp == 'customers' && $query == 'xemcustomers') {
+        include('modules/quanlycustomers/handle.php');
     } else{
         include('modules/dashboard.php');
     }

@@ -68,6 +68,6 @@ $row_title = mysqli_fetch_array($query_category);
     ?>
         <a 
         <?= ($i == $page) ? 'style="background-color: var(--second-color); color: var(--primary-color);"' : ''; ?>
-        href="newproduct.php?menu=sanphamoi&id=<?= $row_title['id_category']; ?>&page=<?= $i ?>" class="page "><?= $i ?></a>
+        href="newproduct.php?menu=sanphamoi&id=<?= $row_title['id_category']; ?>&page=<?= $i ?>" class="page"><?= $i ?></a>
     <?php } ?>
 </div>

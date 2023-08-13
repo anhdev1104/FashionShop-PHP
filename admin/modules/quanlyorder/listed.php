@@ -47,7 +47,7 @@ $query_get_cart = mysqli_query($conn, $sql_get_cart);
                             <?php } ?>
                         </select>
                     </td>
-                    <td class="d-flex flex-column gap-2">
+                    <td>
                         <a href="index.php?action=donhang&query=xemdonhang&code=<?= $row['code_cart']; ?>" class="nav-link btn btn-success mx-2">CHI TIẾT</a>
                     </td>
                 </tr>
