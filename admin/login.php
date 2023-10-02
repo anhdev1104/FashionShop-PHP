@@ -1,19 +1,18 @@
 <?php
 session_start();
-include('../config/connect.php');
+include('../config/pdo.php');
 
 if (isset($_POST['login'])) {
     $username = $_POST['email'];
-    $password = md5($_POST['password']); // PASS: 123456
+    $password = md5($_POST['password']); 
 
+    // Kiểm tra thông tin đăng nhập trong bảng 'admin'
     $sql = "SELECT * FROM admin WHERE username = '$username' AND password = '$password' LIMIT 1";
-    $row = mysqli_query($conn, $sql);
-    $account = mysqli_fetch_array($row);
+    $account = pdo_query($sql);
 
     // Kiểm tra thông tin đăng nhập trong bảng 'user'
     $user_sql = "SELECT * FROM user WHERE email = '$username' AND password = '$password' LIMIT 1";
-    $user_result = mysqli_query($conn, $user_sql);
-    $user_account = mysqli_fetch_array($user_result);
+    $user_account = pdo_query($user_sql);
 
     if ($account) {
         $_SESSION['login'] = $account;

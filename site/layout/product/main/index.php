@@ -1,10 +1,12 @@
 <?php
 $limit = 6;
+
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
     $page = '';
 }
+
 if ($page == '' || $page == 1) {
     $begin = 0;
 } else {
@@ -61,7 +63,7 @@ $row_title = mysqli_fetch_array($query_category);
     $row_page = mysqli_num_rows($sql_page);
     $pages = ceil($row_page / $limit);
 ?>
-<div class="pagination">
+<div class="pagination"> 
         <span>Page:</span>
     <?php 
         for($i = 1; $i <= $pages; $i++) {

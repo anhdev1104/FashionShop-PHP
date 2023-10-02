@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include('../../../../config/connect.php');
+    include('../../../../config/pdo.php');
     
     $id_user = $_SESSION['id_user'];
     $code_order = rand(0, 9999);
@@ -8,7 +8,7 @@
     $cart_query = mysqli_query($conn, $insert_cart);
 
     if ($cart_query) {
-        // Thêm giỏ hàng chỉ tiết
+        // Thêm giỏ hàng chi tiết
         foreach($_SESSION['cart'] as $key => $value) {
             $id_product = $value['id'];
             $quantity = $value['quantity'];

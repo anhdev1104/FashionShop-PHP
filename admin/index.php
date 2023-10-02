@@ -24,7 +24,7 @@
 
 <body>
     <?php
-        include('../config/connect.php');
+        include('../config/pdo.php');
         include('../admin/modules/menu.php'); 
         include('../admin/modules/main.php');
     ?>

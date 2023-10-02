@@ -1,9 +1,6 @@
 <?php 
-    include_once('../../project-php/config/connect.php'); 
+    include_once('../config/pdo.php'); 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +23,6 @@
             include('./layout/home/main.php');
             include('./layout/home/footer.php'); 
         ?>
-
     </div>
 
     <script src="./js/app.js"></script>

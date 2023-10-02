@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    include('../config/connect.php');
+    include('../config/pdo.php');
 
     if (isset($_POST['register'])) {
         $name_user = $_POST['fullname'];

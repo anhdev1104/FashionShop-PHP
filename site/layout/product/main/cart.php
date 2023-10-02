@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../../../../config/connect.php');
+include('../../../../config/pdo.php');
 
 // add sản phảm vào giỏ hàng
 if (isset($_POST['addproductdetails'])) {

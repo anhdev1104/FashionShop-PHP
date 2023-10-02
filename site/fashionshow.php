@@ -1,7 +1,6 @@
 <?php 
-    include('../config/connect.php');
+    include_once('../config/pdo.php'); 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

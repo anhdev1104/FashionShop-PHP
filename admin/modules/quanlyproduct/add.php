@@ -34,10 +34,11 @@
             <select class="form-select" name="productCategory">
                 <?php
                     $sql_category = "SELECT * FROM category ORDER BY id_category ASC";
-                    $query_category = mysqli_query($conn, $sql_category);
-                    while($row_category = mysqli_fetch_array($query_category)) {
+                    $rows = pdo_query($sql_category);
+                    foreach($rows as $row) {
+                        extract($row);
                 ?>
-                    <option value="<?= $row_category['id_category'] ?>"><?= $row_category['category_name'] ?></option>
+                    <option value="<?= $id_category; ?>"><?= $category_name; ?></option>
                 <?php } ?>
             </select>
         </div>

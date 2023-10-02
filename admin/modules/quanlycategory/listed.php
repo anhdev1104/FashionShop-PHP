@@ -1,6 +1,6 @@
 <?php 
     $sql_get_category = "SELECT * FROM category ORDER BY stt ASC";
-    $query_get_category = mysqli_query($conn, $sql_get_category);
+    $rows = pdo_query($sql_get_category);
 ?>
 
 <div class="container mt-5">
@@ -18,16 +18,17 @@
         <tbody>
             <?php
                 $i = 0;
-                while($row = mysqli_fetch_array($query_get_category)) {
+                foreach($rows as $row ) {
                     $i++;
+                    extract($row);
                 ?>
                     <tr>
                         <th scope="row"><?= $i; ?></th>
-                        <td><?= $row['category_name']; ?></td>
-                        <td><?= $row['stt']; ?></td>
+                        <td><?= $category_name; ?></td>
+                        <td><?= $stt; ?></td>
                         <td class="d-flex">
-                            <a href="?action=quanlydanhmuc&query=edit&idcategory=<?= $row['id_category']; ?>" class="nav-link btn btn-warning mx-2">EDIT</a>
-                            <a href="modules/quanlycategory/handle.php?idcategory=<?= $row['id_category']; ?>" class="nav-link btn btn-danger mx-2" onclick="return confirm('Bạn chắc chắn muốn xoá ?')">DELETE</a>
+                            <a href="?action=quanlydanhmuc&query=edit&idcategory=<?= $id_category; ?>" class="nav-link btn btn-warning mx-2">EDIT</a>
+                            <a href="modules/quanlycategory/handle.php?idcategory=<?= $id_category; ?>" class="nav-link btn btn-danger mx-2" onclick="return confirm('Bạn chắc chắn muốn xoá ?')">DELETE</a>
                         </td>
                     </tr>
             <?php } ?>
