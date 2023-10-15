@@ -8,7 +8,7 @@
     $cart_query = mysqli_query($conn, $insert_cart);
 
     if ($cart_query) {
-        // Thêm giỏ hàng chỉ tiết
+        // Thêm giỏ hàng chi tiết
         foreach($_SESSION['cart'] as $key => $value) {
             $id_product = $value['id'];
             $quantity = $value['quantity'];
